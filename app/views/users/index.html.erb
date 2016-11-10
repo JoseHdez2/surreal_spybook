@@ -1,1 +1,24 @@
+<div id='container'>
+<h1 id='title'>THIS IS NOT A SPY BOOK THERE IS NO REASON TO TURN THE PAGE</h1>
+<div id="book">
+  <% Post.all.each do |post| %>
+    <div>
+      <span class="text">
+        <h1><%= post.title %></h1>
+        <h3><%= post.body %></h3>
+      </span>
+    </div>
+  <% end %>
+</div>
+
+<script type='text/javascript'>
+$('#book').turn(
+    {
+      gradients: true,
+      acceleration: true,
+      height: '300px',
+      width: '760px'
+    }
+);
+</script>
 
